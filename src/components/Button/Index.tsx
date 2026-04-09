@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './styled'
 
 function Button() {
   return (
-    <div>Button</div>
+    <div style={styles.container}>Button</div>
   )
 }
 
