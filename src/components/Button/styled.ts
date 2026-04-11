@@ -9,38 +9,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   primary: {
     backgroundColor: COLORS.GOLD,
   },
-
   secondary: {
     backgroundColor: COLORS.GOLD_GLOW,
   },
-
   ghost: {
     backgroundColor: 'transparent',
   },
-
   text: {
     fontSize: 16,
     fontWeight: '600',
   },
-
   primaryText: {
-    color: '#1f1f1f',
+    color: COLORS.BG_PRIMARY,
   },
-
   secondaryText: {
-    color: '#9ca3af',
+    color: COLORS.TEXT_DIM,
   },
-
   disabledButton: {
     opacity: 0.5,
   },
-
   disabledText: {
-    color: '#6b7280',
+    color: COLORS.TEXT_DIM,
   },
 });
 
