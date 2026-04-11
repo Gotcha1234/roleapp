@@ -11,7 +11,7 @@ type Props = {
 
 const Button = ({ label, onPress, variant, disabled = false }: Props) => {
   const buttonVariantStyle = styles[variant];
-  const textVasrianStyle = variant === 'primary' ? styles.primaryText : styles.secondaryText;
+  const textVariantStyle = variant === 'primary' ? styles.primaryText : styles.secondaryText;
 
   return (
     <TouchableOpacity
@@ -19,7 +19,7 @@ const Button = ({ label, onPress, variant, disabled = false }: Props) => {
       disabled={disabled}
       style={[styles.button, buttonVariantStyle, disabled && styles.disabledButton]}
     >
-      <Text style={[styles.text, textVasrianStyle, disabled && styles.disabledText]}>
+      <Text style={[styles.text, textVariantStyle, disabled && styles.disabledText]}>
         {label}
       </Text>
     </TouchableOpacity>
