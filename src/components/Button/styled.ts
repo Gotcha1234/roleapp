@@ -1,16 +1,46 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../../constants/theme';
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 50,
+  button: {
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
+
+  primary: {
+    backgroundColor: COLORS.GOLD,
   },
-  red: {
-    color: 'red',
+
+  secondary: {
+    backgroundColor: COLORS.GOLD_GLOW,
+  },
+
+  ghost: {
+    backgroundColor: 'transparent',
+  },
+
+  text: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+
+  primaryText: {
+    color: '#1f1f1f',
+  },
+
+  secondaryText: {
+    color: '#9ca3af',
+  },
+
+  disabledButton: {
+    opacity: 0.5,
+  },
+
+  disabledText: {
+    color: '#6b7280',
   },
 });
 
