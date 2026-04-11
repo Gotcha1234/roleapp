@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Onboarding } from '../screens/Onboarding';
+import { OnboardingScreen } from '../screens/OnboardingScreen';
 
 export type OnboardingStackParamList = {
   Onboarding: undefined;
@@ -12,7 +12,7 @@ const OnboardingNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Onboarding"
-        component={Onboarding}
+        component={OnboardingScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
