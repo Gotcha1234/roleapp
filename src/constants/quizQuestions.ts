@@ -37,7 +37,7 @@ export const strengthQuestions: QuizQuestion[] = [
       { key: 'high', label: 'Rutina estructurada con progresión', score: 3 },
     ]
   }
-] as const;
+];
 
 export const intelligenceQuestions: QuizQuestion[] = [
   {
@@ -76,7 +76,7 @@ export const intelligenceQuestions: QuizQuestion[] = [
       { key: 'high', label: 'Casi siempre', score: 3 },
     ]
   }
-] as const;
+];
 
 export const resistanceQuestions: QuizQuestion[] = [
   {
