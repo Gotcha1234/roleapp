@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export const Onboarding = () => {
+export const OnboardingScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Onboarding</Text>
