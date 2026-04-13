@@ -10,7 +10,6 @@ type Props = {
   placeholder?: string;
 };
 
-
 const Input = ({ textlabel, value, onChangeText, placeholder }: Props) => {
   return (
     <>
