@@ -9,6 +9,8 @@ export const COLORS = {
     // Gold — accent primary, buttons, active borders
     GOLD: '#c9a84c',
     GOLD_LIGHT: '#f0c96d',
+    GOLD_MID: '#a07020',
+    GOLD_DARK: '#8b5e10',
     GOLD_GLOW: 'rgba(201,168,76,0.15)',
     // Accent general UI
     ACCENT: '#7c6fcd',
@@ -30,4 +32,13 @@ export const COLORS = {
     ERROR: '#e05c5c',
     WARNING: '#e08c4c',
     INFO: '#5c9ce0',
+    DEEPNAVY: '#0a0a18',
+    DARKNAVY: '#111128',
+    MIDNIGHT: '#0f0f1e',
 }
+
+
+export const GRADIENT_BG = {
+    colors: [COLORS.DEEPNAVY, COLORS.DARKNAVY, COLORS.MIDNIGHT] as const,
+    locations: [0, 0.5, 1] as const,
+};
