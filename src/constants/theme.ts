@@ -3,13 +3,16 @@ export const COLORS = {
     BG_PRIMARY: '#0f0f1a',   // primary background
     BG_SECONDARY: '#16162a',   // secondary background
     BG_CARD: '#1e1e35',   // card background
+    BG_BANNER_1: '#FFFFFF0A',  // white with opacity (0.04)
+    BG_BANNER_2: '#FFFFFF08',  // white with opacity (0.03)
+    BG_BANNER_3: ['#C9A84C26', '#C9A84C0D'] as const,
     // Text
     TEXT: '#e8e0d0',   // primary text
     TEXT_DIM: '#8a8299',   // secondary text / placeholders
     // Gold — accent primary, buttons, active borders
     GOLD: '#c9a84c',
     GOLD_LIGHT: '#f0c96d',
-    GOLD_GLOW: 'rgba(201,168,76,0.15)',
+    GOLD_GLOW: '#C9A84C26',
     // Accent general UI
     ACCENT: '#7c6fcd',
     // Stats
