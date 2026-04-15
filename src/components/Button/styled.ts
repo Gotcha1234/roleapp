@@ -3,20 +3,20 @@ import { COLORS } from '../../constants/theme';
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 12,
-    paddingHorizontal: 20,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primary: {
-    backgroundColor: COLORS.GOLD,
-  },
+  primary: {},
   secondary: {
     backgroundColor: COLORS.GOLD_GLOW,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
   },
   ghost: {
     backgroundColor: 'transparent',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
   },
   text: {
     fontSize: 16,
@@ -33,6 +33,21 @@ const styles = StyleSheet.create({
   },
   disabledText: {
     color: COLORS.TEXT_DIM,
+  },
+  fullWidth: {
+    width: '100%',
+  },
+  gradient: {
+    width: '100%',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: COLORS.GOLD,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
   },
 });
 
