@@ -40,7 +40,7 @@ export const CharacterNameScreen = () => {
       <View style={styles.nameLabelContainer}>
         <Text style={styles.nameLabel}>NOMBRE DEL PERSONAJE</Text>
       </View>
-      <View style={{ marginTop: 8 }}>
+      <View style={styles.inputContainer}>
         <Input
           placeholder="Ej. Kael, Shadow, Lyra..."
           value={characterName}
