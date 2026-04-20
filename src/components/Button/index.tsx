@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import styles from './styled';
+import { createStyles } from './styled';
 import { LinearGradient } from 'expo-linear-gradient';
 import { COLORS } from '../../constants/theme';
 
@@ -13,6 +13,7 @@ type Props = {
 };
 
 const Button = ({ label, onPress, variant, disabled = false, fullWidth = false }: Props) => {
+  const styles = createStyles();
   const textVariantStyle = variant === 'primary' ? styles.primaryText : styles.secondaryText;
 
   return (
