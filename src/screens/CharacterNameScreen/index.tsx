@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -9,21 +9,44 @@ import { COLORS } from '../../constants/theme';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SCREENS } from '../../constants/constants';
+import { getCharacter, setCharacter } from '../../store/characterStore';
 
-type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
+const { home, onboardingIntro } = SCREENS;
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList, typeof SCREENS.home>;
 
 export const CharacterNameScreen = () => {
-  const [characterName, setCharacterName] = React.useState('');
+  const [characterName, setCharacterName] = useState('');
   const navigation = useNavigation<NavigationProp>();
   const insets = useSafeAreaInsets();
   const styles = createStyles({ styles: { insets } });
 
+  useEffect(() => {
+    let cancelled = false;
+
+    const retrieveCharacter = async () => {
+      const character = await getCharacter();
+      if (!character || cancelled) return;
+      const characterData = JSON.parse(character);
+      if (characterData?.name) {
+        setCharacterName(characterData.name);
+      }
+    };
+
+    retrieveCharacter();
+
+    return () => { cancelled = true; };
+  }, []);
+
   const handleGoBack = () => {
-    navigation.navigate('HomeScreen');
+    navigation.navigate(home);
   };
 
   const handleContinue = () => {
-    console.log('Continuar');
+    if (!characterName.trim()) return;
+    setCharacter(JSON.stringify({ name: characterName }));
+    navigation.navigate(onboardingIntro);
   };
 
   return (
@@ -40,7 +63,7 @@ export const CharacterNameScreen = () => {
       <View style={styles.nameLabelContainer}>
         <Text style={styles.nameLabel}>NOMBRE DEL PERSONAJE</Text>
       </View>
-      <View style={{ marginTop: 8 }}>
+      <View style={styles.inputContainer}>
         <Input
           placeholder="Ej. Kael, Shadow, Lyra..."
           value={characterName}

@@ -46,4 +46,7 @@ export const createStyles = ({ styles: { insets } }: { styles: { insets: { botto
     justifyContent: 'flex-end',
     paddingBottom: insets.bottom || 20,
   },
+  inputContainer: {
+    marginTop: 8,
+  },
 });

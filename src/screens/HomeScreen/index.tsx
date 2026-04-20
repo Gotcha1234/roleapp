@@ -1,7 +1,7 @@
 
 import { Text, View } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import styles from './styled';
+import { createStyles } from './styled';
 import Button from "../../components/Button";
 import { COLORS, GRADIENT_BG } from '../../constants/theme';
 import { useNavigation } from '@react-navigation/native';
@@ -15,6 +15,7 @@ type Nav = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
 export const HomeScreen = () => {
   const navigation = useNavigation<Nav>();
+  const styles = createStyles();
 
   const handleStartAdventure = () => {
     navigation.navigate(characterName);

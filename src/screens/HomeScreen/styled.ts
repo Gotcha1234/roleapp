@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants/theme";
 
-const styles = StyleSheet.create({
+export const createStyles = () => StyleSheet.create({
   title: {
     color: COLORS.GOLD,
     fontSize: 36,
@@ -54,5 +54,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
-
-export default styles;
