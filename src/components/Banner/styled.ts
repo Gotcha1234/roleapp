@@ -13,10 +13,14 @@ const createStyles = ({
   StyleSheet.create({
     background1: {
       borderRadius: 16,
-      paddingTop: 16,
-      paddingRight: 18,
-      paddingBottom: 16,
-      paddingLeft: 18,
+      paddingTop: 20,
+      paddingRight: 24,
+      paddingBottom: 20,
+      paddingLeft: 24,
+      marginTop: 0,
+      marginRight: 28,
+      marginBottom: 40,
+      marginLeft: 28,
       overflow: 'hidden',
     },
     title: {
@@ -29,10 +33,13 @@ const createStyles = ({
       textAlign: styles.textAlignment,
     },
     textType: {
-      fontStyle: styles.textType === 'normal' ? 'normal' : 'italic',
+      fontStyle: styles.textType === 'italic' ? 'italic' : 'normal',
     },
     textColor: {
       color: styles.textColor || COLORS.TEXT,
+    },
+    bodyText: {
+      lineHeight: 24,
     },
   });
 

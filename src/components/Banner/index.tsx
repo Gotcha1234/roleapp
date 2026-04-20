@@ -44,7 +44,7 @@ const Banner = ({
   const content = (
     <>
       {title && <Text style={[styles.title, styles.textType]}>{title}</Text>}
-      <Text style={[styles.textType, styles.textAlignment, styles.textColor]}>{textContent}</Text>
+      <Text style={[styles.textType, styles.textAlignment, styles.textColor, styles.bodyText]}>{textContent}</Text>
     </>
   );
 

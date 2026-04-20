@@ -6,10 +6,12 @@ import { RootStackParamList } from '../../navigation/AppNavigator';
 import { createStyles } from './styled';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import Banner from '../../components/Banner';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SCREENS } from '../../constants/constants';
 import { getCharacter, setCharacter } from '../../store/characterStore';
 import { GoBack } from '../../components/GoBack';
+import { COLORS } from '../../constants/theme';
 
 const { home, onboardingIntro } = SCREENS;
 
@@ -64,6 +66,13 @@ export const CharacterNameScreen = () => {
           onChangeText={setCharacterName}
         />
       </View>
+      <Banner
+        textContent="Este nombre aparecerá en tu perfil, logros y rankings. Puedes cambiarlo después."
+        backgroundColor={COLORS.BG_CARD}
+        textColor={COLORS.TEXT_DIM}
+        textType="normal"
+        textAlignment="left"
+      />
       {/* TODO: Add banner with message: "Este nombre aparecerá en tu perfil, logros y rankings. Puedes cambiarlo después." */}
       {/* TODO: Banner styles: { backgroundColor: COLORS.BG_CARD, paddingHorizontal: 16, paddingVertical: 14, borderRadius: 14, marginTop: 20 } */}
       <View style={styles.continueButtonContainer}>

@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/AppNavigator';
 import { SCREENS } from '../../constants/constants';
+import Banner from "../../components/Banner";
 
 const { characterName } = SCREENS;
 
@@ -37,7 +38,8 @@ export const HomeScreen = () => {
       </LinearGradient>
       <Text style={styles.title}>ROLEAPP</Text>
       <Text style={styles.subtitle}>CONVIERTE TUS HÁBITOS EN PODER</Text>
-      {/* TODO: Add banner component when finished with default styles */}
+      <Banner textContent='"Bienvenido/a, viajero. Antes de elegir tu camino, necesitamos medir tu energía actual. Responde con honestidad: estas decisiones forjan tu build."'
+      backgroundColor={COLORS.BG_BANNER_1} textColor={COLORS.TEXT} textType="italic" textAlignment="center" borderColor={COLORS.BG_BANNER_2} />
       <View style={styles.buttonContainer}>
         <Button label="Comenzar mi aventura" onPress={handleStartAdventure} variant="primary" fullWidth />
       </View>
