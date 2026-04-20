@@ -7,5 +7,6 @@ export const WEIGHTS = {
 export const SCREENS = {
   home: 'HomeScreen',
   characterName: 'CharacterNameScreen',
-  onboarding: 'OnboardingScreen'
+  onboardingIntro: 'OnboardingIntroScreen',
+  onboarding: 'OnboardingScreen',
 } as const;
