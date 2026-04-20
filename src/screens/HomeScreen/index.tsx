@@ -37,7 +37,7 @@ export const HomeScreen = () => {
       </LinearGradient>
       <Text style={styles.title}>ROLEAPP</Text>
       <Text style={styles.subtitle}>CONVIERTE TUS HÁBITOS EN PODER</Text>
-      {/* TODO: Add banner component when finished */}
+      {/* TODO: Add banner component when finished with default styles */}
       <View style={styles.buttonContainer}>
         <Button label="Comenzar mi aventura" onPress={handleStartAdventure} variant="primary" fullWidth />
       </View>
