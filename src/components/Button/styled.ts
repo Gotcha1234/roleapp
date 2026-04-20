@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../constants/theme';
 
-const styles = StyleSheet.create({
+export const createStyles = () => StyleSheet.create({
   button: {
     borderRadius: 10,
     alignItems: 'center',
@@ -50,5 +50,3 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
 });
-
-export default styles;

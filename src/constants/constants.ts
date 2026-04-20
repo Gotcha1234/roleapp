@@ -3,3 +3,10 @@ export const WEIGHTS = {
   intensity: 0.3,
   system: 0.3
 } as const;
+
+export const SCREENS = {
+  home: 'HomeScreen',
+  characterName: 'CharacterNameScreen',
+  onboardingIntro: 'OnboardingIntroScreen',
+  onboarding: 'OnboardingScreen',
+} as const;

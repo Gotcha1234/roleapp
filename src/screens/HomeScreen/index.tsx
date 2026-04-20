@@ -1,20 +1,24 @@
 
 import { Text, View } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import styles from './styled';
+import { createStyles } from './styled';
 import Button from "../../components/Button";
 import { COLORS, GRADIENT_BG } from '../../constants/theme';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/AppNavigator';
+import { SCREENS } from '../../constants/constants';
+
+const { characterName } = SCREENS;
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
 export const HomeScreen = () => {
   const navigation = useNavigation<Nav>();
+  const styles = createStyles();
 
   const handleStartAdventure = () => {
-    navigation.navigate('OnboardingScreen');
+    navigation.navigate(characterName);
   };
 
   return (
@@ -33,7 +37,7 @@ export const HomeScreen = () => {
       </LinearGradient>
       <Text style={styles.title}>ROLEAPP</Text>
       <Text style={styles.subtitle}>CONVIERTE TUS HÁBITOS EN PODER</Text>
-      {/* TODO: Add banner component when finished */}
+      {/* TODO: Add banner component when finished with default styles */}
       <View style={styles.buttonContainer}>
         <Button label="Comenzar mi aventura" onPress={handleStartAdventure} variant="primary" fullWidth />
       </View>

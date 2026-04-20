@@ -38,6 +38,8 @@ export const COLORS = {
   DEEPNAVY: '#0a0a18',
   DARKNAVY: '#111128',
   MIDNIGHT: '#0f0f1e',
+  BORDER_SUBTLE: 'rgba(255,255,255,0.06)',
+  BORDER_GOLD: 'rgba(201,168,76,0.2)',
 }
 
 export const GRADIENT_BG = {
