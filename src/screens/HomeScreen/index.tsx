@@ -7,6 +7,9 @@ import { COLORS, GRADIENT_BG } from '../../constants/theme';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/AppNavigator';
+import { SCREENS } from '../../constants/constants';
+
+const { characterName } = SCREENS;
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
@@ -14,7 +17,7 @@ export const HomeScreen = () => {
   const navigation = useNavigation<Nav>();
 
   const handleStartAdventure = () => {
-    navigation.navigate('OnboardingScreen');
+    navigation.navigate(characterName);
   };
 
   return (
