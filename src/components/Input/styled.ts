@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     fontSize: 12,
     margin: 0,
-    fontFamily: 'SegoeUI',
     color: COLORS.TEXT_DIM,
   },
   inputBox: {
@@ -24,7 +23,6 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16,
     fontSize: 16,
-    fontFamily: 'SegoeUI',
     boxSizing: 'border-box',
   },
 });

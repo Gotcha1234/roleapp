@@ -11,7 +11,8 @@ export const createStyles = () => StyleSheet.create({
     color: COLORS.TEXT_DIM,
     fontSize: 14,
     fontWeight: '400',
-    marginTop: 8
+    marginTop: 8,
+    marginBottom: 56,
   },
   container: {
     flex: 1,
