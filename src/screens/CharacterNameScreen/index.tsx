@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/AppNavigator';
 import { createStyles } from './styled';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { COLORS } from '../../constants/theme';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SCREENS } from '../../constants/constants';
 import { getCharacter, setCharacter } from '../../store/characterStore';
+import { GoBack } from '../../components/GoBack';
 
 const { home, onboardingIntro } = SCREENS;
 
-type NavigationProp = NativeStackNavigationProp<RootStackParamList, typeof SCREENS.home>;
+type NavigationProp = NativeStackNavigationProp<RootStackParamList, typeof SCREENS.home, typeof SCREENS.onboardingIntro>;
 
 export const CharacterNameScreen = () => {
   const [characterName, setCharacterName] = useState('');
@@ -51,12 +50,7 @@ export const CharacterNameScreen = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        onPress={handleGoBack}
-        style={styles.backButton}>
-        <Ionicons name="arrow-back-outline" size={24} color={COLORS.GOLD} />
-        <Text style={styles.backText}>Volver</Text>
-      </TouchableOpacity>
+      <GoBack onPress={handleGoBack} />
       <Text style={styles.title}>Tu personaje</Text>
       <Text style={styles.subtitle}>¿Cómo quieres que te llamen en tu aventura?</Text>
       <View style={styles.separator} />
