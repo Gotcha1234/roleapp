@@ -1,5 +1,6 @@
 export const COLORS = {
   // Backgrounds
+  BLACK_DARK: '#000000',
   BG_PRIMARY: '#0f0f1a',   // primary background
   BG_SECONDARY: '#16162a',   // secondary background
   BG_CARD: '#1e1e35',   // card background
@@ -37,6 +38,11 @@ export const COLORS = {
   MIDNIGHT: '#0f0f1e',
   BORDER_SUBTLE: 'rgba(255,255,255,0.06)',
   BORDER_GOLD: 'rgba(201,168,76,0.2)',
+  BG_COMPONENTS: 'rgba(255, 255, 255, 0.08)',
+  CHIP_BG: 'rgba(255, 255, 255, 0.05)',
+  QUIZ_OPTION_BG_DARK: 'rgba(201, 168, 76, 0.08)',
+  QUIZ_OPTION_BORDER: 'rgba(201, 168, 76, 0.2)',
+  QUIZ_OPTION_BG_LIGHT: 'rgba(255, 255, 255, 0.06)',
 }
 
 export const GRADIENT_BG = {
