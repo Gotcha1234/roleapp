@@ -8,10 +8,12 @@ interface Props {
   label: string;
   labelColor?: string;
   width?: DimensionValue;
+  backgroundColor?: string;
+  borderColor?: string;
 }
 
-export const Chip = ({ icon, label, labelColor = COLORS.TEXT, width }: Props) => {
-  const styles = createStyles({ styles: { labelColor, width } });
+export const Chip = ({ icon, label, labelColor = COLORS.TEXT, width, backgroundColor, borderColor }: Props) => {
+  const styles = createStyles({ styles: { labelColor, width, backgroundColor, borderColor } });
 
   return (
     <View style={styles.container}>
