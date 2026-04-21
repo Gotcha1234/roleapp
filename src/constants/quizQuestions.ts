@@ -78,7 +78,7 @@ export const intelligenceQuestions: QuizQuestion[] = [
   }
 ];
 
-export const resistanceQuestions: QuizQuestion[] = [
+export const enduranceQuestions: QuizQuestion[] = [
   {
     id: 'endurance-frequency',
     stat: 'endurance',
@@ -233,3 +233,12 @@ export const magicQuestions: QuizQuestion[] = [
     ]
   }
 ]
+
+export const allQuizQuestions = [
+  ...strengthQuestions,
+  ...intelligenceQuestions,
+  ...enduranceQuestions,
+  ...wisdomQuestions,
+  ...faithQuestions,
+  ...magicQuestions
+];
