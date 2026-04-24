@@ -8,9 +8,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/AppNavigator';
 import { SCREENS } from '../../constants/constants';
 
-const { characterName } = SCREENS;
+const { characterName, home } = SCREENS;
 
-type Nav = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
+type Nav = NativeStackNavigationProp<RootStackParamList, typeof home>;
 
 export const HomeScreen = () => {
   const navigation = useNavigation<Nav>();
