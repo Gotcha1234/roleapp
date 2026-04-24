@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { createStyles } from './styled';
 import { LinearGradient } from 'expo-linear-gradient';
 import { COLORS } from '../../constants/theme';
@@ -10,10 +10,14 @@ type Props = {
   variant: 'primary' | 'secondary' | 'ghost';
   disabled?: boolean;
   fullWidth?: boolean;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
+  maxWidth?: number;
+  minWidth?: number;
 };
 
-const Button = ({ label, onPress, variant, disabled = false, fullWidth = false }: Props) => {
-  const styles = createStyles();
+const Button = ({ label, onPress, variant, disabled = false, fullWidth = false, iconLeft, iconRight, maxWidth, minWidth }: Props) => {
+  const styles = createStyles({ maxWidth, minWidth });
   const textVariantStyle = variant === 'primary' ? styles.primaryText : styles.secondaryText;
 
   return (
@@ -29,14 +33,20 @@ const Button = ({ label, onPress, variant, disabled = false, fullWidth = false }
           end={{ x: 1, y: 1 }}
           style={styles.gradient}
         >
+          {iconLeft && <View>{iconLeft}</View>}
           <Text style={[styles.text, textVariantStyle, disabled && styles.disabledText]}>
             {label}
           </Text>
+          {iconRight && <View>{iconRight}</View>}
         </LinearGradient>
       ) : (
-        <Text style={[styles.text, textVariantStyle, disabled && styles.disabledText]}>
-          {label}
-        </Text>
+        <View style={styles.textContainer}>
+          {iconLeft && <View>{iconLeft}</View>}
+          <Text style={[styles.text, textVariantStyle, disabled && styles.disabledText]}>
+            {label}
+          </Text>
+          {iconRight && <View>{iconRight}</View>}
+        </View>
       )}
     </TouchableOpacity>
   );
