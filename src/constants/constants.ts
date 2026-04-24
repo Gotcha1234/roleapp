@@ -9,4 +9,5 @@ export const SCREENS = {
   characterName: 'CharacterNameScreen',
   onboardingIntro: 'OnboardingIntroScreen',
   onboarding: 'OnboardingScreen',
+  quiz: 'QuizScreen',
 } as const;

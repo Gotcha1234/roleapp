@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../constants/theme';
 
-export const createStyles = () => StyleSheet.create({
+export const createStyles = ({ maxWidth, minWidth }: { maxWidth?: number, minWidth?: number }) => StyleSheet.create({
   button: {
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    maxWidth: maxWidth,
+    minWidth: minWidth,
   },
-  primary: {},
   secondary: {
     backgroundColor: COLORS.GOLD_GLOW,
     paddingVertical: 12,
@@ -39,6 +40,7 @@ export const createStyles = () => StyleSheet.create({
   },
   gradient: {
     width: '100%',
+    flexDirection: 'row',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -48,5 +50,15 @@ export const createStyles = () => StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 10,
+    gap: 8
   },
+  textContainer: {
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    gap: 8, 
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  }
 });

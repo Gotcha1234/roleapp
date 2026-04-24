@@ -1,4 +1,3 @@
-
 import { Text, View } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { createStyles } from './styled';
@@ -10,9 +9,9 @@ import { RootStackParamList } from '../../navigation/AppNavigator';
 import { SCREENS } from '../../constants/constants';
 import Banner from "../../components/Banner";
 
-const { characterName } = SCREENS;
+const { characterName, home } = SCREENS;
 
-type Nav = NativeStackNavigationProp<RootStackParamList, 'HomeScreen'>;
+type Nav = NativeStackNavigationProp<RootStackParamList, typeof home>;
 
 export const HomeScreen = () => {
   const navigation = useNavigation<Nav>();

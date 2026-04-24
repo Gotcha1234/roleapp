@@ -18,6 +18,10 @@ export const OnboardingIntroScreen = () => {
     navigation.navigate(SCREENS.characterName);
   };
 
+  const handleStartQuiz = () => {
+    navigation.navigate(SCREENS.quiz);
+  };
+
   return (
     <View style={styles.container}>
       <GoBack onPress={handleGoBack} />
@@ -51,10 +55,7 @@ export const OnboardingIntroScreen = () => {
             fullWidth
             variant="primary"
             label="Empezar cuestionario"
-            onPress={() => {
-              // TODO: Navigate to onboarding questions screen
-              console.log('Continue')
-            }}
+            onPress={handleStartQuiz}
           />
         </View>
         <View style={styles.responseInfoContainer}>
